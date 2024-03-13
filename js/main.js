@@ -25,6 +25,12 @@ function createCard(data){
             <h2>${title}</h2>
             <p>${creationAt}</p>  
             `
+            card.addEventListener("click",()=> singleRoute(id))
             wrapper.appendChild(card)
    })
+}
+
+function singleRoute(id){
+    console.log(id);
+    window.open(`/pages/product.html?id=${id}`,"_self")
 }
